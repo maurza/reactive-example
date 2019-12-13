@@ -7,11 +7,17 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  arr = [1,2,3];
   ngOnInit(): void {
-    const counter = interval(1000);
+    from(this.arr).pipe(map(i => i * 8)).subscribe(_ => console.log(_));
 
-    from([1,2,3]).pipe(map(i => i*8)).subscribe(_ => console.log(_));
-tyqdas
+    setTimeout(() => {
+      this.arr.push(8)
+    },  5000);
+  }
+
+  mostrarArray(){
+    return this.arr.join(',')
   }
   title = 'reactive-example';
 
