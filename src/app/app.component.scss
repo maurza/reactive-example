@@ -1,0 +1,27 @@
+ul {
+    padding: 100px;
+
+    li {
+        font-size: 100px;
+    }
+
+    :nth-child(1){
+        list-style-image: url('/assets/sad.svg');
+    }
+
+    :nth-child(2){
+        list-style-image: url('/assets/confused.svg');
+    }
+
+    :nth-child(3){
+        list-style-image: url('/assets/smiling.svg');
+    }
+
+    :nth-child(4){
+        list-style-image: url('/assets/happy.svg');
+    }
+
+    :nth-child(5){
+        list-style-image: url('/assets/surprised.svg');
+    }
+}
